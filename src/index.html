@@ -1,0 +1,319 @@
+---
+title: "iDesign Site Demo"
+description: "Meta description for the page"
+permalink: "/"
+tags: "sitemap" # content/content.json will make sure that all pages in content/ are marked with a "sitemap" tag, for automatic sitemap generation. As index.html is not in content/, we need to add it here to ensure the root page is included in the sitemap generation
+---
+
+{% extends "layouts/base.html" %}
+
+{% block head %}
+    <!-- Critical styles are loaded first -->
+    <link rel="stylesheet" href="/assets/css/critical.css"/>
+
+    <!-- If we're in production, defer the rest of the home page styles. In development, always load it. Otherwise the site will break when hot-reload is used. -->
+    {% if client.isProduction %}
+        <link rel="preload" href="/assets/css/local.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript>
+            <link rel="stylesheet" href="/assets/css/local.css">
+        </noscript>
+
+    {% else %}
+        <link rel="stylesheet" href="/assets/css/local.css"/>
+    {% endif %}
+
+    <!-- To ensure proper validation, prevent errors, and encourage developers to check, schema's are an opt-in feature. They're very bespoke and requires some customising  -->
+    <!-- Uncomment the code below to enable Structured Data, and test it when you deploy to Netlify - https://developers.google.com/search/docs/appearance/structured-data -->
+    <!-- {% include "components/home-schema.html" %} -->
+{% endblock %}
+
+{% block body %}
+
+<!-- ============================================ -->
+<!--                   Hero                       -->
+<!-- ============================================ -->
+
+<section id="hero-2436">
+    <div class="cs-container">
+        <div class="cs-content">
+            <div class="cs-flex cs-flex1">
+                <span class="cs-topper">Welcome to</span>
+                <h2 class="cs-title">Football Athlete & Speed Training</h2>
+            </div>
+            <div class="cs-flex cs-flex2">
+                <p class="cs-text">
+                    Providing over 50 years of combined coaching experience to help aspiring young athletes raech their next level.
+                </p>
+                <a href="" class="cs-button-solid">Get Started
+                    <svg class="cs-icon" aria-hidden="true" width="30" height="24" viewBox="0 0 30 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M14.83 11.29L10.59 7.05001C10.497 6.95628 10.3864 6.88189 10.2646 6.83112C10.1427 6.78035 10.012 6.75421 9.88 6.75421C9.74799 6.75421 9.61729 6.78035 9.49543 6.83112C9.37357 6.88189 9.26297 6.95628 9.17 7.05001C8.98375 7.23737 8.87921 7.49082 8.87921 7.75501C8.87921 8.0192 8.98375 8.27265 9.17 8.46001L12.71 12L9.17 15.54C8.98375 15.7274 8.87921 15.9808 8.87921 16.245C8.87921 16.5092 8.98375 16.7626 9.17 16.95C9.26344 17.0427 9.37426 17.116 9.4961 17.1658C9.61794 17.2155 9.7484 17.2408 9.88 17.24C10.0116 17.2408 10.1421 17.2155 10.2639 17.1658C10.3857 17.116 10.4966 17.0427 10.59 16.95L14.83 12.71C14.9237 12.617 14.9981 12.5064 15.0489 12.3846C15.0997 12.2627 15.1258 12.132 15.1258 12C15.1258 11.868 15.0997 11.7373 15.0489 11.6154C14.9981 11.4936 14.9237 11.383 14.83 11.29Z" fill="white"></path>
+                        <path d="M20.83 11.29L16.59 7.05001C16.497 6.95628 16.3864 6.88189 16.2646 6.83112C16.1427 6.78035 16.012 6.75421 15.88 6.75421C15.748 6.75421 15.6173 6.78035 15.4954 6.83112C15.3736 6.88189 15.263 6.95628 15.17 7.05001C14.9838 7.23737 14.8792 7.49082 14.8792 7.75501C14.8792 8.0192 14.9838 8.27265 15.17 8.46001L18.71 12L15.17 15.54C14.9838 15.7274 14.8792 15.9808 14.8792 16.245C14.8792 16.5092 14.9838 16.7626 15.17 16.95C15.2634 17.0427 15.3743 17.116 15.4961 17.1658C15.6179 17.2155 15.7484 17.2408 15.88 17.24C16.0116 17.2408 16.1421 17.2155 16.2639 17.1658C16.3857 17.116 16.4966 17.0427 16.59 16.95L20.83 12.71C20.9237 12.617 20.9981 12.5064 21.0489 12.3846C21.0997 12.2627 21.1258 12.132 21.1258 12C21.1258 11.868 21.0997 11.7373 21.0489 11.6154C20.9981 11.4936 20.9237 11.383 20.83 11.29Z" fill="white"></path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+        <img class="cs-logo-feature" decoding="async" src="/assets/images/f-atl-logo.png" alt="logo" width="1280" height="239">
+    </div>
+    <!--Background Image-->
+    <picture class="cs-background">
+        <!--Mobile Image-->
+        <source media="(max-width: 600px)" srcset="/assets/images/football-hero.jpg">
+        <!--Tablet and above Image-->
+        <source media="(min-width: 601px)" srcset="/assets/images/football-hero.jpg">
+        <img decoding="async" src="/assets/images/football-hero.jpg" alt="face with body art" width="1800" height="860" aria-hidden="true" fetchpriority="high">
+    </picture>
+</section>
+
+<!-- ============================================ -->
+<!--                    Services                  -->
+<!-- ============================================ -->
+
+<section id="services-1726">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">Our Services</span>
+            <h2 class="cs-title">Premium Football Training</h2>
+            <p class="cs-text">
+                We know what it takes to be the best.
+            </p>
+        </div>
+        <ul class="cs-card-group">
+            <li class="cs-item">
+                <a href="" class="cs-link">
+                    <span class="cs-number">01</span>
+                    <h3 class="cs-h3">Youth Football Training</h3>
+                </a>
+                <picture class="cs-background">
+                    <source media="(max-width: 600px)" srcset="/assets/images/football-training.jpg">
+                    <source media="(min-width: 601px)" srcset="/assets/images/football-training.jpg">
+                    <img decoding="async" loading="lazy" src="/assets/images/football-training.jpg" alt="football training" width="413" height="320" aria-hidden="true">
+                </picture>
+            </li>
+            <li class="cs-item">
+                <a href="" class="cs-link">
+                    <span class="cs-number">02</span>
+                    <h3 class="cs-h3">Competitive 7v7 League</h3>
+                </a>
+                <picture class="cs-background">
+                    <source media="(max-width: 600px)" srcset="/assets/images/7v7.jpg">
+                    <source media="(min-width: 601px)" srcset="/assets/images/7v7.jpg">
+                    <img decoding="async" loading="lazy" src="/assets/images/7v7.jpg" alt="7v7 football team" width="413" height="320" aria-hidden="true">
+                </picture>
+            </li>
+            <li class="cs-item">
+                <a href="" class="cs-link">
+                    <span class="cs-number">03</span>
+                    <h3 class="cs-h3">Strength Training</h3>
+                </a>
+                <picture class="cs-background">
+                    <source media="(max-width: 600px)" srcset="/assets/images/strength.jpg">
+                    <source media="(min-width: 601px)" srcset="/assets/images/strength.jpg">
+                    <img decoding="async" loading="lazy" src="/assets/images/strength.jpg" alt="man working out" width="413" height="320" aria-hidden="true">
+                </picture>
+            </li>
+        </ul>
+    </div>
+</section>
+
+<!-- ============================================ -->
+<!--                    Services                  -->
+<!-- ============================================ -->
+
+<section id="services-1771">
+    <div class="cs-container">
+        <div class="cs-content">
+            <div class="cs-flex-group">
+                <span class="cs-topper">Youth Training</span>
+                <h2 class="cs-title">Suitable for All Ages</h2>
+            </div>
+            <p class="cs-text">
+                We offer a variety of group and one-on-one coaching options for children and adults. Groups are limited in size to ensure that each person receives plenty of individual attention, as well as allowing for fun scrimmages at the end of each week.
+            </p>
+        </div>
+        <ul class="cs-card-group">
+            <li class="cs-item">
+                <picture class="cs-picture">
+                    <source media="(max-width: 600px)"
+                            srcset="/assets/images/IMG_0659.jpg">
+                    <source media="(min-width: 601px)"
+                            srcset="/assets/images/IMG_0659.jpg">
+                    <img decoding="async"
+                            src="/assets/images/IMG_0659.jpg"
+                            alt="finance" width="413" height="374" aria-hidden="true" loading="lazy">
+                </picture>
+                <div class="cs-details">
+                    <span class="cs-tag">Age Group</span>
+                    <h3 class="cs-h3">10+</h3>
+                    <p class="cs-item-text">
+                        We offer a variety of group and one-on-one coaching options for children and adults. Groups are limited in size to ensure that each person receives plenty of individual attention, as well as allowing for fun scrimmages at the end of each week. 
+                    </p>
+                    <a href="/" class="cs-link">
+                        Sign Up Today
+                        <img class="cs-arrow" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/chevron-right-white.svg" alt="icon" width="20" height="20" aria-hidden="true">
+                    </a>
+                </div>
+            </li>
+            <li class="cs-item">
+                <picture class="cs-picture">
+                    <source media="(max-width: 600px)"
+                            srcset="/assets/images/IMG_0676.jpg">
+                    <source media="(min-width: 601px)"
+                            srcset="/assets/images/IMG_0676.jpg">
+                    <img decoding="async"
+                            src="/assets/images/IMG_0676.jpg"
+                            alt="finance" width="413" height="374" aria-hidden="true" loading="lazy">
+                </picture>
+                <div class="cs-details">
+                    <span class="cs-tag">Age Group</span>
+                    <h3 class="cs-h3">12+</h3>
+                    <p class="cs-item-text">
+                        We offer a variety of group and one-on-one coaching options for children and adults. Groups are limited in size to ensure that each person receives plenty of individual attention, as well as allowing for fun scrimmages at the end of each week.
+                    </p>
+                    <a href="/" class="cs-link">
+                        Join Us Today
+                        <img class="cs-arrow" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/chevron-right-white.svg" alt="icon" width="20" height="20" aria-hidden="true">
+                    </a>
+                </div>
+            </li>
+            <li class="cs-item">
+                <picture class="cs-picture">
+                    <source media="(max-width: 600px)"
+                            srcset="/assets/images/IMG_0728.jpg">
+                    <source media="(min-width: 601px)"
+                            srcset="/assets/images/IMG_0728.jpg">
+                    <img decoding="async"
+                            src="/assets/images/IMG_0728.jpg"
+                            alt="finance" width="413" height="374" aria-hidden="true" loading="lazy">
+                </picture>
+                <div class="cs-details">
+                    <span class="cs-tag">Age Group</span>
+                    <h3 class="cs-h3">14+</h3>
+                    <p class="cs-item-text">
+                        We offer a variety of group and one-on-one coaching options for children and adults. Groups are limited in size to ensure that each person receives plenty of individual attention, as well as allowing for fun scrimmages at the end of each week.
+                    </p>
+                    <a href="/" class="cs-link">
+                        Sign Up Today
+                        <img class="cs-arrow" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/chevron-right-white.svg" alt="icon" width="20" height="20" aria-hidden="true">
+                    </a>
+                </div>
+            </li>
+            <li class="cs-item">
+                <picture class="cs-picture">
+                    <source media="(max-width: 600px)"
+                            srcset="/assets/images/IMG_0720.jpg">
+                    <source media="(min-width: 601px)"
+                            srcset="/assets/images/IMG_0720.jpg">
+                    <img decoding="async"
+                            src="/assets/images/IMG_0720.jpg"
+                            alt="finance" width="413" height="374" aria-hidden="true" loading="lazy">
+                </picture>
+                <div class="cs-details">
+                    <span class="cs-tag">Age Group</span>
+                    <h3 class="cs-h3">16+</h3>
+                    <p class="cs-item-text">
+                        We offer a variety of group and one-on-one coaching options for children and adults. Groups are limited in size to ensure that each person receives plenty of individual attention, as well as allowing for fun scrimmages at the end of each week.
+                    </p>
+                    <a href="/" class="cs-link">
+                        Sign Up Today
+                        <img class="cs-arrow" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/chevron-right-white.svg" alt="icon" width="20" height="20" aria-hidden="true">
+                    </a>
+                </div>
+            </li>
+        </ul>
+    </div>
+</section>
+
+<!-- ============================================ -->
+<!--              Side By Side Reverse            -->
+<!-- ============================================ -->
+
+<section id="sbsr-1462">
+    <div class="cs-container">
+        <!-- Left Image Section -->
+        <div class="cs-image-group">
+            <picture class="cs-picture cs-picture1">
+                <source media="(max-width: 600px)" srcset="/assets/images/IMG_0762.jpg">
+                <source media="(min-width: 601px)" srcset="/assets/images/IMG_0762.jpg">
+                <img loading="lazy" decoding="async" src="/assets/images/IMG_0762.jpg" alt="turbine" width="500" height="729" aria-hidden="true">
+            </picture>
+            <picture class="cs-picture cs-picture2">
+                <source media="(max-width: 600px)" srcset="/assets/images/IMG_0704.jpg">
+                <source media="(min-width: 601px)" srcset="/assets/images/IMG_0704.jpg">
+                <img loading="lazy" decoding="async" src="/assets/images/IMG_0704.jpg" alt="windmill" width="378" height="460" aria-hidden="true">
+            </picture>
+        </div>
+        <!-- Right Content Section-->
+        <div class="cs-content">
+            <span class="cs-topper">Why Choose FAST</span>
+            <h2 class="cs-title">We Know What it Takes to be the Best</h2>
+            <p class="cs-text">
+                Whether you’re an aspiring you ball player or high school athlete trying to get to the next level our experienced football coaches and trainers with over 50 years of experience will deliver the training you need to succeed. With Fast Atlanta Sports, we offer a range of group training options for children and adults of all ages and abilities.
+            </p>
+            <ul class="cs-ul">
+                <li class="cs-li">World-Class Training</li>
+                <li class="cs-li">Pro-Level Coaching</li>
+                <li class="cs-li">Community Involvement</li>
+                <li class="cs-li">Higher Education Opportunities</li>
+            </ul>
+            <a href="" class="cs-button-solid">Sign Up
+                <svg class="cs-icon" aria-hidden="true" width="30" height="24" viewBox="0 0 30 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M14.83 11.29L10.59 7.05001C10.497 6.95628 10.3864 6.88189 10.2646 6.83112C10.1427 6.78035 10.012 6.75421 9.88 6.75421C9.74799 6.75421 9.61729 6.78035 9.49543 6.83112C9.37357 6.88189 9.26297 6.95628 9.17 7.05001C8.98375 7.23737 8.87921 7.49082 8.87921 7.75501C8.87921 8.0192 8.98375 8.27265 9.17 8.46001L12.71 12L9.17 15.54C8.98375 15.7274 8.87921 15.9808 8.87921 16.245C8.87921 16.5092 8.98375 16.7626 9.17 16.95C9.26344 17.0427 9.37426 17.116 9.4961 17.1658C9.61794 17.2155 9.7484 17.2408 9.88 17.24C10.0116 17.2408 10.1421 17.2155 10.2639 17.1658C10.3857 17.116 10.4966 17.0427 10.59 16.95L14.83 12.71C14.9237 12.617 14.9981 12.5064 15.0489 12.3846C15.0997 12.2627 15.1258 12.132 15.1258 12C15.1258 11.868 15.0997 11.7373 15.0489 11.6154C14.9981 11.4936 14.9237 11.383 14.83 11.29Z" fill="white"></path>
+                    <path d="M20.83 11.29L16.59 7.05001C16.497 6.95628 16.3864 6.88189 16.2646 6.83112C16.1427 6.78035 16.012 6.75421 15.88 6.75421C15.748 6.75421 15.6173 6.78035 15.4954 6.83112C15.3736 6.88189 15.263 6.95628 15.17 7.05001C14.9838 7.23737 14.8792 7.49082 14.8792 7.75501C14.8792 8.0192 14.9838 8.27265 15.17 8.46001L18.71 12L15.17 15.54C14.9838 15.7274 14.8792 15.9808 14.8792 16.245C14.8792 16.5092 14.9838 16.7626 15.17 16.95C15.2634 17.0427 15.3743 17.116 15.4961 17.1658C15.6179 17.2155 15.7484 17.2408 15.88 17.24C16.0116 17.2408 16.1421 17.2155 16.2639 17.1658C16.3857 17.116 16.4966 17.0427 16.59 16.95L20.83 12.71C20.9237 12.617 20.9981 12.5064 21.0489 12.3846C21.0997 12.2627 21.1258 12.132 21.1258 12C21.1258 11.868 21.0997 11.7373 21.0489 11.6154C20.9981 11.4936 20.9237 11.383 20.83 11.29Z" fill="white"></path>
+                </svg>
+            </a>
+        </div>
+    </div>
+    <picture class="cs-background">
+        <!--Mobile Image-->
+        <source media="(max-width: 600px)" srcset="/assets/images/stadium.jpg">
+        <!--Tablet and above Image-->
+        <source media="(min-width: 601px)" srcset="/assets/images/stadium.jpg">
+        <img loading="lazy" decoding="async" src="/assets/images/stadium.jpg" alt="turbine" width="1280" height="568">
+    </picture>
+</section>
+
+<!-- ============================================ -->
+<!--                   Stats                      -->
+<!-- ============================================ -->
+
+<section id="stats-1738">
+    <div class="cs-container">
+        <ul class="cs-card-group">
+            <li class="cs-item">
+                <span class="cs-number">38+ Schools</span>
+                <p class="cs-item-text">
+                    We work with more than 38 schools across the metro atlanta area to provide top-notch football training to young athletes.
+                </p>
+                <a href="" class="cs-link">
+                    <span class="cs-link-text">Schools & Partners</span>
+                    <img class="cs-arrow" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/white%20right%20arrow.svg" alt="white arrow icon" width="20" height="20" aria-hidden="true">
+                </a>
+            </li>
+            <li class="cs-item">
+                <span class="cs-number">2,000+ Alumni</span>
+                <p class="cs-item-text">
+                    We have helped thousands of young athletes reach their full potential through our comprehensive football training programs.
+                </p>
+                <a href="" class="cs-link">
+                    <span class="cs-link-text">Testimonials</span>
+                    <img class="cs-arrow" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/white%20right%20arrow.svg" alt="white arrow icon" width="20" height="20" aria-hidden="true">
+                </a>
+            </li>
+            <li class="cs-item">
+                <span class="cs-number">99% Acceptance</span>
+                <p class="cs-item-text">
+                    Nearly all of our students graduate to play football at the collegiate level.
+                </p>
+                <a href="" class="cs-link red">
+                    <span class="cs-link-text">College Info</span>
+                    <img class="cs-arrow" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/white%20right%20arrow.svg" alt="white arrow icon" width="20" height="20" aria-hidden="true">
+                </a>
+            </li>
+        </ul>
+    </div>
+</section>
+                                
+
+
+    {% include 'sections/cta.html' %}
+{% endblock %}

@@ -1,0 +1,257 @@
+---
+title: "About | iDesign Site Demo"
+description: "Meta description for the page"
+permalink: "/about/"
+---
+
+{% extends "layouts/base.html" %}
+
+{% block head %}
+    <link rel="preload" as="image" href="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 640, height: 600 }) | avif %}"/>
+    <link rel="preload" as="image" href="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 482, height: 536 }) | avif %}"/>
+    <link rel="stylesheet" href="/assets/css/about.css">
+{% endblock %}
+
+{% block body %}
+
+    <!-- ============================================ -->
+    <!--                   Banner                     -->
+    <!-- ============================================ -->
+
+    <div id="banner-310">
+        <div class="cs-container">
+            <span class="cs-int-title">About Us</span>
+            <div class="cs-breadcrumbs">
+                <a href="/" class="cs-link">Home</a>
+                <a href="/about/" class="cs-link cs-active">About Us</a>
+            </div>
+        </div>
+        <!--Background Image-->
+        <picture class="cs-background">
+            <!--Mobile Image-->
+            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/stadium.jpg" | resize({ width: 640, height: 600 }) | avif %}" type="image/avif">
+            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/stadium.jpg" | resize({ width: 640, height: 600 }) | webp %}" type="image/webp">
+            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/stadium.jpg" | resize({ width: 640, height: 600 }) | jpeg %}" type="image/jpeg">
+            <!--Tablet Image-->
+            <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/stadium.jpg" | resize({ width: 2048, height: 942 }) | avif %}" type="image/avif">
+            <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/stadium.jpg" | resize({ width: 2048, height: 942 }) | webp %}" type="image/webp">
+            <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/stadium.jpg" | resize({ width: 2048, height: 942 }) | jpeg %}" type="image/jpeg">
+            <!--Desktop Image-->
+            <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/stadium.jpg" | resize({ width: 2500, height: 628 }) | avif %}" type="image/avif">
+            <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/stadium.jpg" | resize({ width: 2500, height: 628 }) | webp %}" type="image/webp">
+            <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/stadium.jpg" | resize({ width: 2500, height: 628 }) | jpeg %}" type="image/jpeg">
+            <img src="{% getUrl "/assets/images/stadium.jpg" | resize({ width: 2500, height: 628 }) | jpeg %}" alt="library" width="1920" height="482" loading="eager" decoding="async">
+        </picture>
+    </div>
+
+<!-- ============================================ -->
+<!--                 Side By Side                 -->
+<!-- ============================================ -->
+
+<section id="sbs-2283">
+    <div class="cs-container">
+        <div class="cs-image-group">
+            <!--Top left image-->
+            <picture class="cs-picture cs-picture1">
+                <!--Mobile Image-->
+                <source media="(max-width: 600px)" srcset="/assets/images/IMG_0665.jpg">
+                <!--Tablet and above Image-->
+                <source media="(min-width: 601px)" srcset="/assets/images/IMG_0665.jpg">
+                <img loading="lazy" decoding="async" src="/assets/images/IMG_0665.jpg" alt="group photo" width="297" height="366">
+            </picture>
+            <!--Bottom right image-->
+            <picture class="cs-picture cs-picture2">
+                <!--Mobile Image-->
+                <source media="(max-width: 600px)" srcset="/assets/images/IMG_0762.jpg">
+                <!--Tablet and above Image-->
+                <source media="(min-width: 601px)" srcset="/assets/images/IMG_0762.jpg">
+                <img loading="lazy" decoding="async" src="/assets/images/IMG_0762.jpg" alt="photograph of team" width="405" height="376">
+            </picture>
+            <!--Middle image-->
+            <picture class="cs-picture cs-picture3">
+                <!--Mobile Image-->
+                <source media="(max-width: 600px)" srcset="/assets/images/football.png">
+                <!--Tablet and above Image-->
+                <source media="(min-width: 601px)" srcset="/assets/images/football.png">
+                <img loading="lazy" decoding="async" src="/assets/images/football.png" alt="football" width="218" height="155">
+            </picture>
+        </div>
+        <div class="cs-content">
+            <div class="cs-flex">
+                <span class="cs-topper">Our Story</span>
+                <h2 class="cs-title">Life on the F.A.S.T. Track</h2>
+                <p class="cs-text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores architecto dolor corporis, optio libero voluptates placeat sapiente exercitationem aliquam, expedita ab rerum quae consectetur quia, pariatur quasi nobis! Totam dignissimos 
+                </p>
+            </div>
+            <!--We hide this on mobile, adding the images into a group in the content section allows us to have better control over its responsivenes when the content section gets taller from more content-->
+            <div class="cs-content-images">
+                <picture class="cs-picture cs-picture1">
+                    <!--Mobile Image-->
+                    <source media="(max-width: 600px)" srcset="/assets/images/IMG_0665.jpg">
+                    <!--Tablet and above Image-->
+                    <source media="(min-width: 601px)" srcset="/assets/images/IMG_0665.jpg">
+                    <img loading="lazy" decoding="async" src="/assets/images/IMG_0665.jpg" alt="group photo" width="297" height="366">
+                </picture>
+                <picture class="cs-picture cs-picture3">
+                    <!--Mobile Image-->
+                    <source media="(max-width: 600px)" srcset="/assets/images/football.png">
+                    <!--Tablet and above Image-->
+                    <source media="(min-width: 601px)" srcset="/assets/images/football.png">
+                    <img loading="lazy" decoding="async" src="/assets/images/football.png" alt="football" width="218" height="155">
+                </picture>
+            </div>
+        </div>
+        <ul class="cs-card-group">
+            <li class="cs-item">
+                <h3 class="cs-h3">Our Mission</h3>
+                <p class="cs-item-text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga delectus deleniti quas illo explicabo unde sapiente, doloribus pariatur et inventore quaerat? Lorem 
+                </p>
+            </li>
+            <li class="cs-item">
+                <h3 class="cs-h3">Our Vision</h3>
+                <p class="cs-item-text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga delectus deleniti quas illo explicabo unde sapiente, doloribus pariatur et inventore quaerat? Lorem ipsum dolor, sit amet consectetur adipisicing elit!
+                </p>
+            </li>
+            <!--We hide this on mobile, adding the images into a group in the content section allows us to have better control over its responsivenes when the cs-card-group gets taller from more content-->
+            <li class="cs-item cs-item-picture">
+                <picture class="cs-picture cs-picture2">
+                    <!--Mobile Image-->
+                    <source media="(max-width: 600px)" srcset="/assets/images/IMG_0762.jpg">
+                    <!--Tablet and above Image-->
+                    <source media="(min-width: 601px)" srcset="/assets/images/IMG_0762.jpg">
+                    <img loading="lazy" decoding="async" src="/assets/images/IMG_0762.jpg" alt="photograph of team" width="405" height="376">
+                </picture>
+            </li>
+        </ul>
+    </div>
+</section>
+
+    <!-- ============================================ -->
+<!--                 Side By Side                 -->
+<!-- ============================================ -->
+
+<section id="sbs-2277">
+    <div class="cs-container">
+        <div class="cs-content">
+            <div class="cs-header">
+                <span class="cs-topper">Our Promise</span>
+                <h2 class="cs-title">What You Get When You Choose F.A.S.T.</h2>
+            </div>
+            <div class="cs-wrapper">
+                <div class="cs-flex">
+                    <p class="cs-text">
+                        Choose FAST for expert service. With 25 years of experience, we provide reliable, high-quality solutions that exceed your expectations.
+                    </p>
+                    <ul class="cs-ul">
+                        <li class="cs-li">
+                            <img class="cs-icon" aria-hidden="true" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/diamond.svg" loading="lazy" decoding="async" alt="squares" width="11" height="11">
+                            <p class="cs-item-text">
+                                <strong>Expert Coaching:</strong> Decades of experience ensure every practice is perfect.
+                            </p>
+                        </li>
+                        <li class="cs-li">
+                            <img class="cs-icon" aria-hidden="true" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/diamond.svg" loading="lazy" decoding="async" alt="squares" width="11" height="11">
+                            <p class="cs-item-text">
+                                <strong>Professional Facilities:</strong> We use only the highest-quality equipment for lasting results.
+                            </p>
+                        </li>
+                        <li class="cs-li">
+                            <img class="cs-icon" aria-hidden="true" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/diamond.svg" loading="lazy" decoding="async" alt="squares" width="11" height="11">
+                            <p class="cs-item-text">
+                                <strong>Personal Mentorshup:</strong> A one-on-one approach to help you reach your goals faster.
+                            </p>
+                        </li>
+                        <li class="cs-li">
+                            <img class="cs-icon" aria-hidden="true" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/diamond.svg" loading="lazy" decoding="async" alt="squares" width="11" height="11">
+                            <p class="cs-item-text">
+                                <strong>College Roadmap:</strong> Guidance through the recruitment and scholarship process.
+                            </p>
+                        </li>
+                    </ul>
+                    <a href="" class="cs-button-solid">Meet Our Team</a>
+                </div>
+                <div class="cs-image-group">
+                    <ul class="cs-card-group">
+                        <li class="cs-item">
+                            <img class="cs-item-icon" aria-hidden="true" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/building-white.svg" alt="icon" width="48" height="48" loading="lazy">
+                            <span class="cs-number">
+                                50+
+                                <span class="cs-desc">Atlanta Communities Served</span>
+                            </span>
+                        </li>
+                        <li class="cs-item">
+                            <img class="cs-item-icon" aria-hidden="true" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/trophy-white.svg" alt="icon" width="48" height="48" loading="lazy">
+                            <span class="cs-number">
+                                98%
+                                <span class="cs-desc">College Acceptance Rate</span>
+                            </span>
+                        </li>
+                    </ul>
+                    <picture class="cs-picture">
+                        <source media="(max-width: 600px)" srcset="/assets/images/IMG_0763.jpg">
+                        <source media="(min-width: 601px)" srcset="/assets/images/IMG_0763.jpg">
+                        <img aria-hidden="true" decoding="async" src="/assets/images/IMG_0763.jpg" alt="construction site" width="755" height="491" loading="lazy">
+                    </picture>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- <img class="cs-floater" aria-hidden="true" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/paint-brush.png" alt="paint brush" width="483" height="160" loading="lazy"> -->
+</section>
+
+<!-- ============================================ -->
+<!--                  Gallery                     -->
+<!-- ============================================ -->
+
+<section id="gallery-483">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">Superstar Gallery</span>
+            <h2 class="cs-title">The F.A.S.T. Hall of Fame</h2>
+            <p class="cs-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut. 
+            </p>
+            <a href="" class="cs-cta">
+                <!--Arrow Right-->
+                <svg class="cs-arrow" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none"><path fill="#FAFBFC" d="M24.55 31.367c-.317 0-.633-.117-.883-.367a1.258 1.258 0 0 1 0-1.767L32.9 20l-9.233-9.233a1.258 1.258 0 0 1 0-1.767 1.258 1.258 0 0 1 1.766 0L35.55 19.117a1.258 1.258 0 0 1 0 1.766L25.433 31c-.25.25-.566.367-.883.367Z"/><path fill="#FAFBFC" d="M34.383 21.25H6.333A1.26 1.26 0 0 1 5.083 20c0-.683.567-1.25 1.25-1.25h28.05c.684 0 1.25.567 1.25 1.25a1.26 1.26 0 0 1-1.25 1.25Z"/></svg>
+                <!--Wrapped in a span so it can be animated-->
+                <span class="cs-cta-text">More<br> Legendary <br> Moments</span>
+            </a>
+            <picture class="cs-content-picture">
+                <source media="(max-width: 600px)" srcset="/assets/images/IMG_0728.jpg">
+                <source media="(min-width: 601px)" srcset="/assets/images/IMG_0728.jpg">
+                <img loading="lazy" decoding="async" src="/assets/images/IMG_0728.jpg" alt="yard" width="630" height="532">
+            </picture>
+        </div>
+        <div class="cs-grid">
+            <picture class="cs-picture cs-picture1">
+                <source media="(max-width: 600px)" srcset="/assets/images/IMG_0659.jpg">
+                <source media="(min-width: 601px)" srcset="/assets/images/IMG_0659.jpg">
+                <img loading="lazy" decoding="async" src="/assets/images/IMG_0659.jpg" alt="yard" width="305" height="522">
+            </picture>
+            <picture class="cs-picture cs-picture2">
+                <source media="(max-width: 600px)" srcset="/assets/images/IMG_0676.jpg">
+                <source media="(min-width: 601px)" srcset="/assets/images/IMG_0676.jpg">
+                <img loading="lazy" decoding="async" src="/assets/images/IMG_0676.jpg" alt="yard" width="305" height="348">
+            </picture>
+            <picture class="cs-picture cs-picture3">
+                <source media="(max-width: 600px)" srcset="/assets/images/IMG_0704.jpg">
+                <source media="(min-width: 601px)" srcset="/assets/images/IMG_0704.jpg">
+                <img loading="lazy" decoding="async" src="/assets/images/IMG_0704.jpg" alt="yard" width="305" height="387">
+            </picture>
+            <picture class="cs-picture cs-picture4">
+                <source media="(max-width: 600px)" srcset="/assets/images/IMG_0720.jpg">
+                <source media="(min-width: 601px)" srcset="/assets/images/IMG_0720.jpg">
+                <img loading="lazy" decoding="async" src="/assets/images/IMG_0720.jpg" alt="yard" width="305" height="483">
+            </picture>
+        </div>
+    </div>
+</section>
+                                 
+
+    {% include 'sections/cta.html' %}
+
+{% endblock %}
