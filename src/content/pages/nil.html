@@ -1,0 +1,183 @@
+---
+title: "NIL | iDesign Site Demo"
+description: "Meta description for the page"
+permalink: "/nil/"
+---
+
+{% extends "layouts/base.html" %}
+
+{% block head %}
+    <link rel="preload" as="image" href="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 640, height: 600 }) | avif %}"/>
+    <link rel="preload" as="image" href="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 482, height: 536 }) | avif %}"/>
+    <link rel="stylesheet" href="/assets/css/nil.css">
+{% endblock %}
+
+{% block body %}
+
+    <!-- ============================================ -->
+    <!--                   Banner                     -->
+    <!-- ============================================ -->
+
+    <div id="banner-310">
+        <div class="cs-container">
+            <span class="cs-int-title">NIL Opportunities</span>
+            <div class="cs-breadcrumbs">
+                <a href="/" class="cs-link">Home</a>
+                <a href="/training/" class="cs-link cs-active">NIL</a>
+            </div>
+        </div>
+        <!--Background Image-->
+        <picture class="cs-background">
+            <!--Mobile Image-->
+            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/stadium.jpg" | resize({ width: 640, height: 600 }) | avif %}" type="image/avif">
+            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/stadium.jpg" | resize({ width: 640, height: 600 }) | webp %}" type="image/webp">
+            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/stadium.jpg" | resize({ width: 640, height: 600 }) | jpeg %}" type="image/jpeg">
+            <!--Tablet Image-->
+            <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/stadium.jpg" | resize({ width: 2048, height: 942 }) | avif %}" type="image/avif">
+            <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/stadium.jpg" | resize({ width: 2048, height: 942 }) | webp %}" type="image/webp">
+            <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/stadium.jpg" | resize({ width: 2048, height: 942 }) | jpeg %}" type="image/jpeg">
+            <!--Desktop Image-->
+            <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/stadium.jpg" | resize({ width: 2500, height: 628 }) | avif %}" type="image/avif">
+            <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/stadium.jpg" | resize({ width: 2500, height: 628 }) | webp %}" type="image/webp">
+            <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/stadium.jpg" | resize({ width: 2500, height: 628 }) | jpeg %}" type="image/jpeg">
+            <img src="{% getUrl "/assets/images/stadium.jpg" | resize({ width: 2500, height: 628 }) | jpeg %}" alt="library" width="1920" height="482" loading="eager" decoding="async">
+        </picture>
+    </div>
+
+<!-- ============================================ -->
+<!--                      Stats                   -->
+<!-- ============================================ -->
+
+<section id="stats-2428">
+	<div class="cs-container">
+		<div class="cs-wrapper">
+			<div class="cs-content">
+				<span class="cs-topper">What Is F.A.S.T. N.I.L.?</span>
+				<h2 class="cs-title">A Place to Train For National Exposure</h2>
+				<p class="cs-text">
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae ante quis velit euismod faucibus rutrum ut nulla. Praesent imperdiet condimentum turpis in tempor. Donec semper blandit ligula, ac euismod orci pulvinar vel. Donec at enim feugiat sem egestas egestas. Aenean ac egestas arcu. Nulla pulvinar, ipsum id sagittis condimentum, magna orci posuere elit, non gravida magna tortor sagittis nibh. Phasellus sit amet arcu id velit congue sagittis sed quis augue.
+				</p>
+				<p class="cs-text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae ante quis velit euismod faucibus rutrum ut nulla. Praesent imperdiet condimentum turpis in tempor. Donec semper blandit ligula, ac euismod orci pulvinar vel.
+                </p>
+			</div>
+			<picture class="cs-picture">
+				<!--Mobile Image-->
+				<source media="(max-width: 600px)" srcset="/assets/images/football-guy.png" />
+				<!--Tablet and above Image-->
+				<source media="(max-width: 1023px)" srcset="/assets/images/football-guy.png" />
+                <!--Desktop and above Image-->
+				<source media="(min-width: 1024px)" srcset="/assets/images/football-guy.png" />
+				<img loading="lazy" decoding="async" src="/assets/images/football-guy.png" alt="football guy" width="608" height="862" />
+			</picture>
+		</div>
+		<ul class="cs-card-group">
+			<li class="cs-item">
+				<span class="cs-number">100+</span>
+				<h3 class="cs-h3">Student Profiles</h3>
+				<p class="cs-item-text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit..
+                </p>
+			</li>
+			<li class="cs-item">
+				<span class="cs-number">1.2M+</span>
+				<h3 class="cs-h3">Social Media Views</h3>
+				<p class="cs-item-text">
+                    Our athletes shine on Instagram and TikTok, exposing them to nationwide recruitment opportunities.
+                </p>
+			</li>
+			<li class="cs-item">
+				<span class="cs-number">22 Years</span>
+				<h3 class="cs-h3">Combined Coaching Experience</h3>
+				<p class="cs-item-text">
+                    With years of training experience, our team infuses intensity into everything we do.
+                </p>
+			</li>
+		</ul>
+	</div>
+</section>
+
+<!-- ============================================ -->
+<!--                  Services                    -->
+<!-- ============================================ -->
+
+<section id="services-1735">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">Why Choose F.A.S.T. For</span>
+            <h2 class="cs-title">NIL Representation</h2>
+        </div>
+        <ul class="cs-card-group">
+            <li class="cs-item">
+                <picture class="cs-icon-wrapper">
+                    <img class="cs-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/white-house.svg" alt="white house" width="32" height="32">
+                </picture>
+                <div class="cs-flex">
+                    <h3 class="cs-h3">We Have The Best Connections</h3>
+                    <p class="cs-item-text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae ante quis velit euismod faucibus rutrum ut nulla. Praesent imperdiet condimentum turpis in tempor.
+                    </p>
+                </div>
+            </li>
+            <li class="cs-item">
+                <picture class="cs-icon-wrapper">
+                    <img class="cs-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/white-layer.svg" alt="white layers" width="32" height="32">
+                </picture>
+                <div class="cs-flex">
+                    <h3 class="cs-h3">Social Media Growth</h3>
+                    <p class="cs-item-text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae ante quis velit euismod faucibus rutrum ut nulla. Praesent imperdiet condimentum turpis in tempor.                    </p>
+                </div>
+            </li>
+            <li class="cs-item">
+                <picture class="cs-icon-wrapper">
+                    <img class="cs-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/white-hourglass.svg" alt="white hourglass" width="32" height="32">
+                </picture>
+                <div class="cs-flex">
+                    <h3 class="cs-h3">National Exposure</h3>
+                    <p class="cs-item-text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae ante quis velit euismod faucibus rutrum ut nulla. Praesent imperdiet condimentum turpis in tempor.
+                    </p>
+                </div>
+            </li>
+            <li class="cs-item">
+                <picture class="cs-icon-wrapper">
+                    <img class="cs-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/white-layer.svg" alt="white layers" width="32" height="32">
+                </picture>
+                <div class="cs-flex">
+                    <h3 class="cs-h3">College Merchandise</h3>
+                    <p class="cs-item-text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae ante quis velit euismod faucibus rutrum ut nulla. Praesent imperdiet condimentum turpis in tempor.
+                    </p>
+                </div>
+            </li>
+            <li class="cs-item">
+                <picture class="cs-icon-wrapper">
+                    <img class="cs-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/white-hourglass.svg" alt="white hourglass" width="32" height="32">
+                </picture>
+                <div class="cs-flex">
+                    <h3 class="cs-h3">Endorsement Opportunities</h3>
+                    <p class="cs-item-text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae ante quis velit euismod faucibus rutrum ut nulla. Praesent imperdiet condimentum turpis in tempor.
+                    </p>
+                </div>
+            </li>
+            <li class="cs-item">
+                <picture class="cs-icon-wrapper">
+                    <img class="cs-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/white-layer.svg" alt="white layers" width="32" height="32">
+                </picture>
+                <div class="cs-flex">
+                    <h3 class="cs-h3">Earn $ While You Train</h3>
+                    <p class="cs-item-text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae ante quis velit euismod faucibus rutrum ut nulla. Praesent imperdiet condimentum turpis in tempor.
+                    </p>
+                </div>
+            </li>
+        </ul>
+    </div>
+</section>    
+
+
+    {% include 'sections/cta.html' %}
+
+{% endblock %}

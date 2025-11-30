@@ -1,0 +1,208 @@
+---
+title: "7v7 | iDesign Site Demo"
+description: "Meta description for the page"
+permalink: "/7v7/"
+---
+
+{% extends "layouts/base.html" %}
+
+{% block head %}
+    <link rel="preload" as="image" href="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 640, height: 600 }) | avif %}"/>
+    <link rel="preload" as="image" href="{% getUrl "/assets/images/cabinets.jpg" | resize({ width: 482, height: 536 }) | avif %}"/>
+    <link rel="stylesheet" href="/assets/css/7v7.css">
+{% endblock %}
+
+{% block body %}
+
+    <!-- ============================================ -->
+    <!--                   Banner                     -->
+    <!-- ============================================ -->
+
+    <div id="banner-310">
+        <div class="cs-container">
+            <span class="cs-int-title">Competitive 7v7 Leage</span>
+            <div class="cs-breadcrumbs">
+                <a href="/" class="cs-link">Home</a>
+                <a href="/training/" class="cs-link cs-active">7v7</a>
+            </div>
+        </div>
+        <!--Background Image-->
+        <picture class="cs-background">
+            <!--Mobile Image-->
+            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/stadium.jpg" | resize({ width: 640, height: 600 }) | avif %}" type="image/avif">
+            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/stadium.jpg" | resize({ width: 640, height: 600 }) | webp %}" type="image/webp">
+            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/stadium.jpg" | resize({ width: 640, height: 600 }) | jpeg %}" type="image/jpeg">
+            <!--Tablet Image-->
+            <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/stadium.jpg" | resize({ width: 2048, height: 942 }) | avif %}" type="image/avif">
+            <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/stadium.jpg" | resize({ width: 2048, height: 942 }) | webp %}" type="image/webp">
+            <source media="(max-width: 1024px)" srcset="{% getUrl "/assets/images/stadium.jpg" | resize({ width: 2048, height: 942 }) | jpeg %}" type="image/jpeg">
+            <!--Desktop Image-->
+            <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/stadium.jpg" | resize({ width: 2500, height: 628 }) | avif %}" type="image/avif">
+            <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/stadium.jpg" | resize({ width: 2500, height: 628 }) | webp %}" type="image/webp">
+            <source media="(min-width: 1024px)" srcset="{% getUrl "/assets/images/stadium.jpg" | resize({ width: 2500, height: 628 }) | jpeg %}" type="image/jpeg">
+            <img src="{% getUrl "/assets/images/stadium.jpg" | resize({ width: 2500, height: 628 }) | jpeg %}" alt="library" width="1920" height="482" loading="eager" decoding="async">
+        </picture>
+    </div>
+
+<!-- ============================================ -->
+<!--                Side By Side                  -->
+<!-- ============================================ -->
+
+<section id="sbs-1285">
+    <div class="cs-container">
+        <div class="cs-image-group">
+            <picture class="cs-picture cs-picture1">
+                <!--Mobile Image-->
+                <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/building1.jpg">
+                <!--Tablet and above Image-->
+                <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/building1.jpg">
+                <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/building1.jpg" alt="building" width="203" height="203">
+            </picture>
+            <picture class="cs-picture cs-picture2">
+                <!--Mobile Image-->
+                <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/building2.jpg">
+                <!--Tablet and above Image-->
+                <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/building2.jpg">
+                <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/building2.jpg" alt="building" width="207" height="207">
+            </picture>
+            <picture class="cs-picture cs-picture3">
+                <!--Mobile Image-->
+                <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/building3.jpg">
+                <!--Tablet and above Image-->
+                <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/building3.jpg">
+                <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/building3.jpg" alt="building" width="214" height="214">
+            </picture>
+            <picture class="cs-picture cs-picture4">
+                <!--Mobile Image-->
+                <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/building4.jpg">
+                <!--Tablet and above Image-->
+                <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/building4.jpg">
+                <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/building4.jpg" alt="building" width="223" height="223">
+            </picture>
+            <picture class="cs-picture cs-picture5">
+                <!--Mobile Image-->
+                <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/building5.jpg">
+                <!--Tablet and above Image-->
+                <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/building5.jpg">
+                <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/building5.jpg" alt="building" width="287" height="287">
+            </picture>
+            <picture class="cs-picture cs-picture6">
+                <!--Mobile Image-->
+                <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/building6.jpg">
+                <!--Tablet and above Image-->
+                <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/building6.jpg">
+                <img loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/building6.jpg" alt="building" width="203" height="203">
+            </picture>
+            <!--Stripe background-->
+            <picture class="cs-waves-wrapper">
+                <img class="cs-waves" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/svg-waves.svg" alt="stripes" width="650" height="933" aria-hidden="true">
+            </picture>
+        </div>
+        <div class="cs-content">
+            <span class="cs-topper">Welcome To</span>
+            <h2 class="cs-title">F.A.S.T. Atlanta 7v7</h2>
+            <p class="cs-text">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima dolorem quod ex nobis? Blanditiis labore magnam modi doloribus provident accusantium a corporis. Unde deserunt magnam dolorem ducimus velit, labore voluptates.  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima dolorem quod ex nobis? Blanditiis labore magnam modi doloribus provident accusantium a corporis. Unde deserunt magnam dolorem ducimus velit, labore voluptates.
+            </p>
+            <a href="" class="cs-button-solid">Get Started</a>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================ -->
+<!--                 Why Choose                   -->
+<!-- ============================================ -->
+
+<section id="why-choose-506">
+    <div class="cs-container">
+        <div class="cs-content">
+            <div class="cs-flex">
+                <span class="cs-topper">Ready to Level Up?</span>
+                <h2 class="cs-title">How to Get Started</h2>
+            </div>
+            <p class="cs-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam tempora nulla sit reprehenderit quod suscipit, soluta minus impedit libero dolor et aspernatur ratione blanditiis nihil!
+            </p>
+        </div>
+        <ul class="cs-card-group">
+            <li class="cs-item">
+                <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Why-Choose/icon-squares.svg" loading="lazy" decoding="async" alt="icon" width="70" height="70">
+                <h3 class="cs-h3">Step #1</h3>
+                <p class="cs-item-text">
+                    Nulla Lorem mollit cupidatat irure. Laborum magna nulla duis ullamc.
+                </p>
+            </li>
+            <li class="cs-item">
+                <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Why-Choose/icon-squares.svg" loading="lazy" decoding="async" alt="icon" width="70" height="70">
+                <h3 class="cs-h3">Step #2</h3>
+                <p class="cs-item-text">
+                    Nulla Lorem mollit cupidatat irure. Laborum magna nulla duis ullamc.
+                </p>
+            </li>
+            <li class="cs-item">
+                <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Why-Choose/icon-squares.svg" loading="lazy" decoding="async" alt="icon" width="70" height="70">
+                <h3 class="cs-h3">Step #3</h3>
+                <p class="cs-item-text">
+                    Nulla Lorem mollit cupidatat irure. Laborum magna nulla duis ullamc.
+                </p>
+            </li>
+            <li class="cs-item">
+                <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Why-Choose/icon-squares.svg" loading="lazy" decoding="async" alt="icon" width="70" height="70">
+                <h3 class="cs-h3">Step #4</h3>
+                <p class="cs-item-text">
+                    Nulla Lorem mollit cupidatat irure. Laborum magna nulla duis ullamc.
+                </p>
+            </li>
+        </ul>
+    </div>
+</section>
+
+<!-- ============================================ -->
+<!--                     CTA                      -->
+<!-- ============================================ -->
+
+<section id="cta-480">
+    <div class="cs-container">
+        <ul class="cs-card-group">
+            <li class="cs-item">
+                <!--Content Section-->
+                <div class="cs-left-section">
+                    <span class="cs-number">Upcoming Tryouts</span>
+                    <h2 class="cs-h2">Click to register for our <span class="cs-color">Winter Season</span></h2>
+                    <a href="" class="cs-link">
+                        <span class="cs-fake-button">Sign Up</span>
+                        <span class="cs-link-text">⠀</span>
+                        <img class="cs-arrow" aria-hidden="true" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/CTA/arrow-right-green.svg" loading="lazy" decoding="async" alt="arrow icon" width="20" height="20">
+                    </a>
+                </div>
+                <!--Picrure-->
+                <picture class="cs-picture">
+                    <source media="(max-width: 600px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/landscaping2.jpg">
+                    <source media="(min-width: 601px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/landscaping2.jpg">
+                    <img aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/landscaping2.jpg" alt="yard" width="169" height="306">
+                </picture>
+            </li>
+            <li class="cs-item">
+                <!--Content Section-->
+                <div class="cs-left-section">
+                    <span class="cs-number">Next Event</span>
+                    <h2 class="cs-h2"><span class="cs-color">F.A.S.T. Fundraiser</span> Starting January 15th</h2>
+                    <a href="" class="cs-link">
+                        <span class="cs-fake-button">See More</span>
+                        <span class="cs-link-text">⠀</span>
+                        <img class="cs-arrow" aria-hidden="true" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/CTA/arrow-right-green.svg" loading="lazy" decoding="async" alt="arrow icon" width="20" height="20">
+                    </a>
+                </div>
+                <!--Picrure-->
+                <picture class="cs-picture">
+                    <source media="(max-width: 600px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/CTA/house-m.jpg">
+                    <source media="(min-width: 601px)" srcset="https://csimg.nyc3.cdn.digitaloceanspaces.com/CTA/house.jpg">
+                    <img aria-hidden="true" loading="lazy" decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/CTA/house.jpg" alt="yard" width="169" height="306">
+                </picture>
+            </li>
+        </ul>
+    </div>
+</section>
+                                
+
+{% endblock %}
